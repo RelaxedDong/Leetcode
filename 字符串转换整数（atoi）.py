@@ -1,30 +1,71 @@
+# encoding:utf8
 
-select p.FirstName, p.LastName, a.City,a.State from Person p left join Address a on p.PersonId = a.PersonId
+def myreturn(strip_str):
+    try:
+        strip_str = int(strip_str)
+        if isinstance(strip_str, int):
+            if -2147483648 < strip_str < 2147483647:
+                return strip_str
+            if strip_str<-2147483648:
+                return -2147483648
+            if strip_str > 2147483648:
+                return 2147483648
+    except:
+        pass
+
+
 class Solution(object):
-    def letterCombinations(self, digits):
-        dic = {2: ['a', 'b', 'c'],
-               3: ['d', 'e', 'f'],
-               4: ['g', 'h', 'i'],
-               5: ['j', 'k', 'l'],
-               6: ['m', 'n', 'o'],
-               7: ['p', 'q', 'r', 's'],
-               8: ['t', 'u', 'v'],
-               9: ['w', 'x', 'y', 'z'],
-               }
-        # 存储结果的数组
-        ret_str = []
-        if len(digits) == 0: return []
-        # 递归出口，当递归到最后一个数的时候result拿到结果进行for循环遍历
-        if len(digits) == 1:
-            return dic[int(digits[0])]
-        # 递归调用
-        result = self.letterCombinations(digits[1:])
-        # result是一个数组列表，遍历后字符串操作，加入列表
-        for r in result:
-            for j in dic[int(digits[0])]:
-                ret_str.append(j + r)
-        return ret_str
+    def myAtoi(self, string):
+        """
+        :type str: str
+        :rtype: int
+        """
+        if len(string) == 0:
+            return 0
+        try:
+            if isinstance(int(string), int):
+                return myreturn(string)
+        except:
+            if 'a'<string[0]<'z' or 'A' < string[0] < 'Z':
+                return 0
 
-s = Solution()
-result = s.letterCombinations('234')
-print(result)
+        strip_str = ""
+        for s in string:
+            if s != " ":
+                strip_str += s
+        sub = ''
+        pre = ""
+        if strip_str.startswith('-'):
+            pre = "-"
+            if isinstance(strip_str[1], str):
+                return 0
+
+        try:
+            if not isinstance(int(strip_str[1]), int) or strip_str.startswith('.'):
+                return 0
+        except:
+            if "." in strip_str:
+                re = strip_str.split('.')
+                print(re)
+                if int(re[0]) == 0:
+                    return re[1]
+                return re[0]
+        for s in strip_str:
+            try:
+                if isinstance(int(s), int):
+                    sub += s
+                else:
+                    break
+            except:
+                pass
+        strip_str = pre + sub
+        return myreturn(strip_str)
+
+
+
+s = Solution().myAtoi("-91283472332")
+print(s)
+
+
+
+
