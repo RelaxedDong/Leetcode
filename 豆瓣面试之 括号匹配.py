@@ -9,7 +9,6 @@ def check(s):
     for c in s:
         if c in CharLeft:
             LeftStack.append(c)
-
         elif c in CharRight:
             if LeftStack and LeftStack[-1] == charactors[c]:
                 LeftStack.pop()

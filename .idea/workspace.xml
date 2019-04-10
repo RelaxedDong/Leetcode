@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea49a2c9-2c78-4a99-93fb-1ce1010e97b1" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/判断一个整数是否是回文数.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/豆瓣面试之 括号匹配.py" afterPath="$PROJECT_DIR$/豆瓣面试之 括号匹配.py" />
     </list>
@@ -79,8 +78,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="571" />
-    <option name="y" value="128" />
+    <option name="x" value="369" />
+    <option name="y" value="16" />
     <option name="width" value="1488" />
     <option name="height" value="1040" />
   </component>
@@ -319,11 +318,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554869820496</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="判断数字回文">
+      <created>1554874869112</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1554874869112</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="571" y="128" width="1488" height="1040" extended-state="0" />
+    <frame x="369" y="16" width="1488" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -379,7 +385,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="字符串转整数" />
     <MESSAGE value="爬楼梯" />
-    <option name="LAST_COMMIT_MESSAGE" value="爬楼梯" />
+    <MESSAGE value="判断数字回文" />
+    <option name="LAST_COMMIT_MESSAGE" value="判断数字回文" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
