@@ -46,7 +46,6 @@ class Solution(object):
         except:
             if "." in strip_str:
                 re = strip_str.split('.')
-                print(re)
                 if int(re[0]) == 0:
                     return re[1]
                 return re[0]
